@@ -13,7 +13,8 @@
         console.log(response); // The current login status of the person.
         if (response.status === "connected") {
           // Logged into your webpage and Facebook.
-          testAPI();
+          // testAPI();
+          login();
         } else {
           // Not logged into your webpage or we are unable to tell.
           document.getElementById("status").innerHTML =
@@ -42,17 +43,18 @@
           statusChangeCallback(response); // Returns the login status.
         });
       };
-
-      FB.login(
-        function (response) {
-          console.log("permissions");
-        },
-        {
-          scope:
-            "public_profile, email, ads_management, ads_read, business_management, pages_manage_ads, read_insights, page_show_lists",
-          return_scopes: true,
-        }
-      );
+      function login() {
+        FB.login(
+          function (response) {
+            console.log("permissions");
+          },
+          {
+            scope:
+              "public_profile, email, ads_management, ads_read, business_management, pages_manage_ads, read_insights, page_show_lists",
+            return_scopes: true,
+          }
+        );
+      }
 
       function testAPI() {
         // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
