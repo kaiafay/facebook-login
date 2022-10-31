@@ -69,7 +69,10 @@
 
     <!-- The JS SDK Login Button -->
 
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    <fb:login-button
+      scope="public_profile, email, ads_management, business_management, pages_show_lists"
+      onlogin="checkLoginState();"
+    >
       Add Facebook Account
       <!-- https://stackoverflow.com/questions/3792231/fblogin-button-custom?noredirect=1&lq=1 -->
     </fb:login-button>
