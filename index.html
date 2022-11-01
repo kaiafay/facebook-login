@@ -83,9 +83,12 @@
       Add Facebook Account
       <!-- https://stackoverflow.com/questions/3792231/fblogin-button-custom?noredirect=1&lq=1 -->
     </fb:login-button>
-    <fb:logout-button data-scope="public_profile, email" onlogout="logout();">
-      Logout
-    </fb:logout-button>
+
+    <span id="fbLogout" onclick="logout()"
+      ><a class="fb_button fb_button_medium"
+        ><span class="fb_button_text">Logout</span></a
+      ></span
+    >
 
     <div id="status"></div>
 
