@@ -74,12 +74,13 @@
         });
 
         FB.api("/me/permissions", function (response) {
-          console.log(
-            "These are the permissions granted by " +
-              response.name +
-              ": " +
-              response.permissions
-          );
+          console.log(response);
+          // console.log(
+          //   "These are the permissions granted by " +
+          //     response.name +
+          //     ": " +
+          //     response.permissions
+          // );
         });
       }
     </script>
