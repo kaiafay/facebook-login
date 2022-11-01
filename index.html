@@ -43,10 +43,11 @@
           statusChangeCallback(response); // Returns the login status.
         });
       };
+
       function login() {
         FB.login(
           function (response) {
-            console.log("permissions");
+            testAPI();
           },
           {
             scope:
@@ -54,6 +55,12 @@
             return_scopes: true,
           }
         );
+      }
+
+      function logout() {
+        FB.logout(function (response) {
+          console.log("logging out...");
+        });
       }
 
       function testAPI() {
@@ -76,6 +83,9 @@
       Add Facebook Account
       <!-- https://stackoverflow.com/questions/3792231/fblogin-button-custom?noredirect=1&lq=1 -->
     </fb:login-button>
+    <fb:logout-button data-scope="public_profile, email" onlogout="logout();">
+      Logout
+    </fb:logout-button>
 
     <div id="status"></div>
 
