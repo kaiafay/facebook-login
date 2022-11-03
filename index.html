@@ -11,7 +11,7 @@
         // Called with the results from FB.getLoginStatus().
         console.log("statusChangeCallback");
         console.log(response); // The current login status of the person.
-        if (response.status === "connected") {
+        if (response.status === "connected" || "unknown") {
           // Logged into your webpage and Facebook.
           // testAPI();
           login();
