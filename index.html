@@ -26,7 +26,7 @@
         const apiURL =
           "https://2llnitjo25.execute-api.us-west-2.amazonaws.com/alpha/facebooklogin";
 
-        fetch(apiURL).then(function (response) {
+        fetch(apiURL, { mode: "no-cors" }).then(function (response) {
           if (response.ok) {
             return response.json().then(function (data) {
               console.log(data);
